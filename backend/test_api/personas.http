@@ -1,0 +1,28 @@
+@PORT = 3000
+###
+GET http://localhost:{{PORT}}/api/personas
+###
+GET http://localhost:{{PORT}}/api/personas?sexo=m&apellido=perez
+###
+GET http://localhost:{{PORT}}/api/personas/2
+###
+POST http://localhost:{{PORT}}/api/personas
+Content-Type: application/json
+
+{
+    "nom":"Pepe",
+    "apell": "Perez",
+    "edad": "25"
+}
+###
+PUT http://localhost:3000/api/personas/4
+Content-Type: application/json
+
+{
+    "edad":"99"
+}
+
+###
+DELETE http://localhost:3000/api/personas/1
+
+
